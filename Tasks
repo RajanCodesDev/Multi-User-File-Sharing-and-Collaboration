@@ -1,0 +1,35 @@
+-----------------------Multi-User File Sharing---------------------------------
+
+Done:
+	Backend:
+		1.Server Setup:
+		- Made a Login and Registration API
+		- 
+
+
+	Frontend:
+	
+
+IN-Progress:
+	- Adding BCrypt to Registration and login API
+	- 
+
+
+Pending:
+	Priority High:
+		1. Add Dataabase and Create Model for User.js(MongoDB) 
+		
+
+
+
+Project Tasks:
+	Backend:
+		Server Setup
+		User Auth
+		File Handling
+		Sharing Logic
+		Cloud/Infra Side
+		CI/CD
+		
+	Frontend:
+		

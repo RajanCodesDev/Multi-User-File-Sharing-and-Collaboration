@@ -1,6 +1,21 @@
+import { configDotenv } from 'dotenv'
 import express from 'express'
-const port = 3000
+configDotenv()
+
+// defining constants
+const port = process.env.PORT
 const app = express()
 
+//route
 
+
+
+
+app.get('/', (req, res)=>{
+    res.send("Hello World!")
+})
+
+app.listen(port, ()=>{
+    console.log(`App is running on ${port}`)
+})
 
