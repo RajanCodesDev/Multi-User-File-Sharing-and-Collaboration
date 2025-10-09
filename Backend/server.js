@@ -1,21 +1,30 @@
-import { configDotenv } from 'dotenv'
+import 'dotenv/config'
+import userRouter from './src/routes/userRouter.js'
+import dbconnection from './src/config/dbconnection.js'
 import express from 'express'
-configDotenv()
-
-// defining constants
-const port = process.env.PORT
 const app = express()
 
-//route
+const port = process.env.PORT
+
+
+// db connection
+dbconnection()
+
+
+// middlewares
+app.use(express.json())
 
 
 
+// routes
+app.use('/user', userRouter)
 
-app.get('/', (req, res)=>{
-    res.send("Hello World!")
+// root document
+app.get('/', (req,res)=>{
+    res.send("Root Document!")
 })
 
-app.listen(port, ()=>{
-    console.log(`App is running on ${port}`)
-})
 
+// listen 
+app.listen(port)
+console.log(port)
